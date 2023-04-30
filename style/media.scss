@@ -1,0 +1,41 @@
+@media (max-width: 992px) {
+  .container {
+    max-width: 992px;
+  }
+  .services {
+    padding-left: 24px;
+    padding-right: 24px;
+    &__contents {
+      justify-content: center;
+      grid-template-columns: repeat(3, 240px);
+      column-gap: 24px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    padding: 0;
+    max-width: 100%;
+  }
+  .services {
+    padding: 16px 16px 38px;
+    &__contents {
+      display: flex;
+      justify-content: unset;
+    }
+    &__wrapper {
+      display: block;
+      height: 72px;
+    }
+    &__btn {
+      display: none;
+    }
+  }
+}

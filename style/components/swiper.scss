@@ -1,0 +1,11 @@
+.swiper {
+  width: 240px;
+  height: 102px;
+  margin-left: 0;
+  margin-right: 0;
+  overflow: visible;
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: var(--swiper-pagination-bottom, 0px);
+  }
+}

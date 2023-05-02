@@ -9,12 +9,6 @@ body {
   box-sizing: border-box;
 }
 
-.container {
-  max-width: 1120px;
-  padding: 0 10px;
-  margin: 0 auto;
-}
-
 .swiper {
   width: 240px;
   height: 102px;
@@ -30,7 +24,19 @@ body {
 
 .services {
   padding: 15px 32px 32px;
-  background: #f2f2f2;
+}
+
+@media (max-width: 992px) {
+  .services {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 320px) {
+  .services {
+    padding: 16px 16px 38px;
+  }
 }
 
 .services__title {
@@ -51,6 +57,21 @@ body {
   min-width: 0;
 }
 
+@media (max-width: 992px) {
+  .services__contents {
+    justify-content: center;
+    grid-template-columns: repeat(3, 224px);
+    column-gap: 24px;
+  }
+}
+
+@media (max-width: 320px) {
+  .services__contents {
+    display: flex;
+    justify-content: unset;
+  }
+}
+
 .services__wrapper {
   display: none;
   height: 100%;
@@ -58,6 +79,17 @@ body {
   border: 1px solid #eaeaea;
   border-radius: 6px;
   min-width: 0;
+}
+
+@media (max-width: 320px) {
+  .services__wrapper {
+    display: block;
+    height: 72px;
+  }
+}
+
+.services__wrapper--show {
+  display: block;
 }
 
 .services__brand {
@@ -90,6 +122,7 @@ body {
 }
 
 .services__btn {
+  cursor: pointer;
   display: none;
   margin-top: 24px;
   padding-left: 31px;
@@ -128,33 +161,31 @@ body {
   border-left: 1.5px solid #0dcecb;
 }
 
-.services__btn-hide::before {
+.services__btn--show {
+  display: block;
+}
+
+@media (max-width: 320px) {
+  .services__btn--show {
+    display: none;
+  }
+}
+
+.services__btn--hide::before {
   transform: rotate(45deg);
   top: 6px;
 }
 
-.services__btn-hide::after {
+.services__btn--hide::after {
   transform: rotate(45deg);
   top: 12px;
 }
 
-.active {
-  display: block;
-}
-
-@media (max-width: 992px) {
-  .container {
-    max-width: 992px;
-  }
-  .services {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-  .services__contents {
-    justify-content: center;
-    grid-template-columns: repeat(3, 240px);
-    column-gap: 24px;
-  }
+.container {
+  overflow: hidden;
+  max-width: 1120px;
+  padding: 0 10px;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
@@ -163,23 +194,15 @@ body {
   }
 }
 
+@media (max-width: 992px) {
+  .container {
+    max-width: 992px;
+  }
+}
+
 @media (max-width: 320px) {
   .container {
     padding: 0;
     max-width: 100%;
-  }
-  .services {
-    padding: 16px 16px 38px;
-  }
-  .services__contents {
-    display: flex;
-    justify-content: unset;
-  }
-  .services__wrapper {
-    display: block;
-    height: 72px;
-  }
-  .services__btn {
-    display: none;
   }
 }

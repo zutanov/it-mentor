@@ -54,25 +54,24 @@ const brands = document.querySelectorAll(".services__wrapper");
 const contents = document.querySelector(".services__contents");
 const services = document.querySelector(".services");
 const btnShow = document.querySelector(".services__btn");
-const btnHide = document.querySelector(".services__btn-hide");
+const btnHide = document.querySelector(".services__btn--hide");
 
 const brand = Array.from(brands);
-let brandlength = brand.slice(1);
+let brandItems;
 
 if (document.documentElement.clientWidth > 768) {
-  brandlength = brand.slice(0, 8);
+  brandItems = brand.slice(0, 8);
 } else if (document.documentElement.clientWidth > 320) {
-  brandlength = brand.slice(0, 6);
+  brandItems = brand.slice(0, 6);
 } else {
   const swiperDiv = document.createElement("div");
   const swiperPagin = document.createElement("div");
-  console.log(swiperDiv);
-  services.appendChild(swiperDiv);
-  swiperDiv.append(contents);
-  swiperDiv.appendChild(swiperPagin);
   swiperDiv.classList.add("swiper");
   swiperPagin.classList.add("swiper-pagination");
-  brandlength = brand.slice(1);
+  swiperDiv.append(contents);
+  swiperDiv.appendChild(swiperPagin);
+  services.appendChild(swiperDiv);
+  brandItems = brand.slice(0);
 }
 
 const swiper = new Swiper(".swiper", {
@@ -85,17 +84,17 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-brandlength.forEach((el) => el.classList.add("active"));
+brandItems.forEach((el) => el.classList.add("services__wrapper--show"));
 
 btnShow.addEventListener("click", function () {
-  this.classList.remove("active");
-  btnHide.classList.add("active");
-  brand.forEach((el) => el.classList.add("active"));
+  this.classList.remove("services__btn--show");
+  btnHide.classList.add("services__btn--show");
+  brand.forEach((el) => el.classList.add("services__wrapper--show"));
 });
 
 btnHide.addEventListener("click", function () {
-  this.classList.remove("active");
-  btnShow.classList.add("active");
-  brand.forEach((el) => el.classList.remove("active"));
-  brandlength.forEach((el) => el.classList.add("active"));
+  this.classList.remove("services__btn--show");
+  btnShow.classList.add("services__btn--show");
+  brand.forEach((el) => el.classList.remove("services__wrapper--show"));
+  brandItems.forEach((el) => el.classList.add("services__wrapper--show"));
 });

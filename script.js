@@ -61,13 +61,19 @@ let brandItems;
 
 if (document.documentElement.clientWidth > 768) {
   brandItems = brand.slice(0, 8);
+  brandItems = brand.slice(0, 8);
 } else if (document.documentElement.clientWidth > 320) {
+  brandItems = brand.slice(0, 6);
   brandItems = brand.slice(0, 6);
 } else {
   const swiperDiv = document.createElement("div");
   const swiperPagin = document.createElement("div");
   swiperDiv.classList.add("swiper");
   swiperPagin.classList.add("swiper-pagination");
+  swiperDiv.append(contents);
+  swiperDiv.appendChild(swiperPagin);
+  services.appendChild(swiperDiv);
+  brandItems = brand.slice(0);
   swiperDiv.append(contents);
   swiperDiv.appendChild(swiperPagin);
   services.appendChild(swiperDiv);

@@ -1,0 +1,28 @@
+.technic {
+  margin-top: 50px;
+  &__title {
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: $menu-text-color;
+  }
+  &__contents {
+    margin-bottom: 24px;
+    display: grid;
+    grid-template-columns: repeat(4, 240px);
+    grid-auto-rows: minmax(160px, auto);
+    column-gap: 32px;
+    row-gap: 16px;
+    height: 160px;
+    overflow: hidden;
+  }
+  &__card {
+    display: grid;
+    padding: 16px;
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    &-img {
+      align-self: end;
+      justify-self: end;
+    }
+  }
+}

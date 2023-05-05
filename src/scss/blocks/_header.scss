@@ -1,0 +1,51 @@
+.header {
+  padding-top: 42px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    position: relative;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: -0.6px;
+    color: $main-text-color;
+    line-height: 40px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -33px;
+      height: 100%;
+      width: 3px;
+      background: $highlight;
+      border-radius: 2px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
+    img {
+      margin-left: 8px;
+    }
+  }
+  &__bottom {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__btn {
+    padding: 7px 12px;
+    border-radius: 6px;
+    color: $menu-text-color;
+    &_checked {
+      border: 2px solid $btn-border-color;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.review {
+  padding: 15px 0 51px;
+
+  &__title {
+    padding-left: 13px;
+    color: $menu-text-color;
+  }
+  &__wrapper {
+    display: flex;
+  }
+  &__info {
+    padding-right: 36px;
+    width: 50%;
+  }
+  &__desc {
+    margin: 19px 0 14px;
+  }
+  &__link {
+    padding-left: 13px;
+    position: relative;
+    &::before {
+      content: url(../icons/arrows.svg);
+      position: absolute;
+      left: -8px;
+    }
+  }
+  &__img {
+    width: 50%;
+    img {
+      width: 100%;
+    }
+  }
+}

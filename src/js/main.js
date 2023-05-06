@@ -39,3 +39,19 @@ btnRepair.addEventListener("click", function (e) {
 btnTechnic.addEventListener("click", function (e) {
   contentTrigger(technicWrapper, e.target, btnTechnicArrow);
 });
+
+const messageIcon = document.querySelector("#message");
+const closeIcon = document.querySelector("#close");
+const feedback = document.querySelector(".overlay");
+console.dir(feedback);
+
+messageIcon.addEventListener("click", () => {
+  feedback.style.visibility = "visible";
+});
+
+feedback.addEventListener("click", (e) => {
+  let target = e.target;
+  if (target.parentNode.id == "close" || target.className == "overlay") {
+    feedback.style.visibility = "hidden";
+  }
+});

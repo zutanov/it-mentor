@@ -1,0 +1,19 @@
+.feedback {
+  width: 440px;
+  padding: 40px 32px 0;
+}
+
+.feedback__title {
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.feedback__title::before {
+  content: "";
+  position: absolute;
+  left: -33px;
+  height: 100%;
+  width: 3px;
+  background: #41f6d7;
+  border-radius: 2px;
+}

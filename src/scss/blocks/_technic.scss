@@ -8,12 +8,16 @@
   &__contents {
     margin-bottom: 24px;
     display: grid;
-    grid-template-columns: repeat(4, 240px);
+    grid-template-columns: repeat(4, minmax(224px, 240px));
     grid-auto-rows: minmax(160px, auto);
     column-gap: 32px;
     row-gap: 16px;
     height: 160px;
     overflow: hidden;
+    @media (max-width: 1399px) {
+      // grid-template-columns: repeat(4, 224px);
+      column-gap: 21px;
+    }
   }
   &__card {
     display: grid;

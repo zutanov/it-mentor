@@ -8,13 +8,16 @@
   &__contents {
     margin-bottom: 24px;
     display: grid;
-    grid-template-columns: repeat(4, 240px);
+    grid-template-columns: repeat(4, minmax(224px, 240px));
     grid-auto-rows: minmax(72px, auto);
     column-gap: 32px;
     row-gap: 16px;
     height: 160px;
     overflow: hidden;
     // min-width: 0;
+    @media (max-width: 1399px) {
+      column-gap: 21px;
+    }
   }
   &__wrapper {
     height: 100%;

@@ -40,18 +40,64 @@ btnTechnic.addEventListener("click", function (e) {
   contentTrigger(technicWrapper, e.target, btnTechnicArrow);
 });
 
-const messageIcon = document.querySelector("#message");
-const closeIcon = document.querySelector("#close");
-const feedback = document.querySelector(".overlay");
-console.dir(feedback);
+const messageIcon = document.querySelectorAll("#message");
+const callIcon = document.querySelectorAll("#callOrder");
+const feedback = document.querySelector("#feedback");
+const call = document.querySelector("#call");
 
-messageIcon.addEventListener("click", () => {
-  feedback.style.visibility = "visible";
+messageIcon.forEach((el) => {
+  el.addEventListener("click", () => {
+    feedback.style.visibility = "visible";
+  });
+});
+callIcon.forEach((el) => {
+  el.addEventListener("click", () => {
+    call.style.visibility = "visible";
+  });
 });
 
-feedback.addEventListener("click", (e) => {
-  let target = e.target;
-  if (target.parentNode.id == "close" || target.className == "overlay") {
-    feedback.style.visibility = "hidden";
+function closeModal(id, e) {
+  if (
+    e.target.parentNode.id == "close" ||
+    e.target.className == "overlay" ||
+    e.target.className == "menu__icon"
+  ) {
+    id.style.visibility = "hidden";
   }
+}
+feedback.addEventListener("click", (e) => {
+  closeModal(feedback, e);
+});
+call.addEventListener("click", (e) => {
+  closeModal(call, e);
+});
+
+const menu = document.querySelector(".menu"),
+  menuOverflow = document.querySelector(".menu__overflow"),
+  menuHorizontal = document.querySelector(".menu-h"),
+  burger = menuHorizontal.querySelector(".menu-h__icon_burger");
+
+function menuShow() {
+  menu.classList.add("menu_show");
+  menuHorizontal.style.visibility = "hidden";
+  menuOverflow.classList.add("menu__overflow_checked");
+  document.body.style.overflowY = "hidden";
+}
+
+function menuHide(e) {
+  if (
+    e.target.className === "menu menu_show" ||
+    e.target.parentNode.className === "menu__icon menu__icon_close"
+  ) {
+    menu.classList.remove("menu_show");
+    menuOverflow.classList.remove("menu__overflow_checked");
+    menuHorizontal.style.visibility = "visible";
+    document.body.style.overflowY = "unset";
+  }
+}
+
+burger.addEventListener("click", menuShow);
+
+menu.addEventListener("click", (e) => {
+  menuHide(e);
 });

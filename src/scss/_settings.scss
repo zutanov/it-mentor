@@ -19,8 +19,6 @@ body {
   background-color: $background;
   scroll-behavior: smooth;
   font-family: "TT Lakes";
-  display: flex;
-  justify-content: space-between;
 }
 
 a {
@@ -110,6 +108,14 @@ textarea:focus {
   }
 }
 
+.wrapper {
+  display: flex;
+  justify-content: center;
+  @media (max-width: 1399px) {
+    display: block;
+  }
+}
+
 .overlay {
   visibility: hidden;
   height: 100vh;
@@ -119,7 +125,7 @@ textarea:focus {
   right: 0;
   top: 0;
   overflow: hidden;
-  background: $white;
+  background: rgba($color: $white, $alpha: 0.9);
   display: flex;
   justify-content: flex-end;
 }

@@ -1,10 +1,41 @@
 .menu {
   height: 100vh;
-  padding: 18px 24px 32px;
-  width: 320px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @media (max-width: 1399px) {
+    left: -380px;
+    position: absolute;
+    box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
+    z-index: 5;
+  }
+  &_show {
+    @media (max-width: 1399px) {
+      position: fixed;
+      width: 100%;
+      z-index: 5;
+      left: 0;
+      top: 0;
+      overflow: hidden;
+      background: rgba($color: $white, $alpha: 0.9);
+    }
+  }
+  &__overflow {
+    height: 100%;
+    padding: 18px 24px 32px;
+    width: 320px;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.8s;
+    @media (max-width: 1399px) {
+      left: -380px;
+      position: absolute;
+      box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
+      z-index: 10;
+    }
+    &_checked {
+      left: 0;
+    }
+  }
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -15,10 +46,17 @@
     cursor: pointer;
     &_close {
       display: none;
+      @media (max-width: 1399px) {
+        display: block;
+      }
     }
   }
+
   &__link {
     margin-bottom: 28px;
+    @media (max-width: 1399px) {
+      margin-bottom: 32px;
+    }
     &_checked {
       color: $menu-text-color;
       position: relative;
@@ -33,6 +71,7 @@
       }
     }
   }
+
   &__contacts {
     display: flex;
     margin-bottom: 16px;
@@ -52,6 +91,44 @@
     margin-right: 7px;
     &_checked {
       color: $menu-text-color;
+    }
+  }
+  &-h {
+    display: none;
+    padding: 18px 0;
+    @media (max-width: 1399px) {
+      display: block;
+    }
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__icon {
+      &_burger {
+        margin-right: 43px;
+      }
+    }
+    &__bottom {
+      display: flex;
+      align-items: center;
+    }
+    &__icons {
+      margin-left: 42px;
+      display: flex;
+      .menu-h__icon:first-child {
+        margin-right: 16px;
+      }
+    }
+    &__contacts {
+      display: flex;
+      .menu-h__icon {
+        margin-right: 16px;
+      }
     }
   }
 }

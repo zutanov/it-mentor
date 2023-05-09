@@ -131,16 +131,24 @@
               >
                 Ремонтируемые бренды
               </button>
-              <button class="btn btn--reset title header__btn">
+              <button
+                class="btn btn--reset title header__btn header__btn_service"
+              >
                 Дополнительные услуги
               </button>
-              <button class="btn btn--reset title header__btn">
+              <button
+                class="btn btn--reset title header__btn header__btn_price"
+              >
                 Цены на услуги
               </button>
-              <button class="btn btn--reset title header__btn">
+              <button
+                class="btn btn--reset title header__btn header__btn_adress"
+              >
                 Адреса сервисных центров
               </button>
-              <button class="btn btn--reset title header__btn">
+              <button
+                class="btn btn--reset title header__btn header__btn_special"
+              >
                 Специальные цены
               </button>
             </div>
@@ -174,7 +182,7 @@
             </div>
           </section>
           <section class="repair">
-            <div class="container">
+            <div class="container swiper">
               <h2 class="title repair__title">
                 Ремонт техники различных брендов
               </h2>
@@ -254,56 +262,57 @@
               <h2 class="title technic__title">
                 Ремонт различных видов техники
               </h2>
-              <div class="technic__contents">
-                <div class="technic__card">
+              <div class="technic__contents swiper-wrapper">
+                <div class="technic__card swiper-slide">
                   <div class="title technic__card-title">Ремонт ноутбуков</div>
                   <div class="technic__card-img">
                     <img src="icons/go.svg" alt="" />
                   </div>
                 </div>
-                <div class="technic__card">
+                <div class="technic__card swiper-slide">
                   <div class="title technic__card-title">Ремонт планшетов</div>
                   <div class="technic__card-img">
                     <img src="icons/go.svg" alt="" />
                   </div>
                 </div>
-                <div class="technic__card">
+                <div class="technic__card swiper-slide">
                   <div class="title technic__card-title">Ремонт ПК</div>
                   <div class="technic__card-img">
                     <img src="icons/go.svg" alt="" />
                   </div>
                 </div>
-                <div class="technic__card">
+                <div class="technic__card swiper-slide">
                   <div class="title technic__card-title">Ремонт мониторов</div>
                   <div class="technic__card-img">
                     <img src="icons/go.svg" alt="" />
                   </div>
                 </div>
-                <div class="technic__card">
+                <div class="technic__card swiper-slide">
                   <div class="title technic__card-title">Ремонт ноутбуков</div>
                   <div class="technic__card-img">
                     <img src="icons/go.svg" alt="" />
                   </div>
                 </div>
-                <div class="technic__card">
+                <div class="technic__card swiper-slide">
                   <div class="title technic__card-title">Ремонт планшетов</div>
                   <div class="technic__card-img">
                     <img src="icons/go.svg" alt="" />
                   </div>
                 </div>
-                <div class="technic__card">
+                <div class="technic__card swiper-slide">
                   <div class="title technic__card-title">Ремонт ПК</div>
                   <div class="technic__card-img">
                     <img src="icons/go.svg" alt="" />
                   </div>
                 </div>
-                <div class="technic__card">
+                <div class="technic__card swiper-slide">
                   <div class="title technic__card-title">Ремонт мониторов</div>
                   <div class="technic__card-img">
                     <img src="icons/go.svg" alt="" />
                   </div>
                 </div>
               </div>
+              <div class="swiper-pagination"></div>
               <div class="repair__switch">
                 <img
                   src="icons/arrows.svg"
@@ -319,52 +328,134 @@
           <section class="price">
             <div class="container">
               <h2 class="title price__title">цены на услуги</h2>
-              <div class="price__wrapper">
-                <h4 class="title title-sm title-sm_sm">Ремонтные услуги</h4>
-                <h4 class="title title-sm title-sm_sm">Цена</h4>
-                <h4 class="title title-sm title-sm_sm">Срок</h4>
-              </div>
-              <div class="price__wrapper">
-                <h4 class="title title-sm title-sm_md">Диагностика</h4>
-                <h4 class="title title-sm title-sm_md">Бесплатно</h4>
-                <h4 class="title title-sm title-sm_md">30 мин</h4>
-                <button class="btn btn--reset price__btn">Заказать</button>
-              </div>
-              <div class="price__wrapper">
-                <h4 class="title title-sm title-sm_md">Замена дисплея</h4>
-                <h4 class="title title-sm title-sm_md">1 000 ₽</h4>
-                <h4 class="title title-sm title-sm_md">30-120 мин</h4>
-                <button class="btn btn--reset price__btn">Заказать</button>
-              </div>
-              <div class="price__wrapper">
-                <h4 class="title title-sm title-sm_md">
-                  Замена полифонического динамика
-                </h4>
-                <h4 class="title title-sm title-sm_md">1 000 ₽</h4>
-                <h4 class="title title-sm title-sm_md">30-120 мин</h4>
-                <button class="btn btn--reset price__btn">Заказать</button>
-              </div>
-              <div class="price__wrapper">
-                <h4 class="title title-sm title-sm_md">
-                  Тестирование с выдачей технического заключения
-                </h4>
-                <h4 class="title title-sm title-sm_md">1 000 ₽</h4>
-                <h4 class="title title-sm title-sm_md">30-120 мин</h4>
-                <button class="btn btn--reset price__btn">Заказать</button>
-              </div>
-              <div class="price__wrapper">
-                <h4 class="title title-sm title-sm_md">
-                  Замена программного обеспечения
-                </h4>
-                <h4 class="title title-sm title-sm_md">1 000 ₽</h4>
-                <h4 class="title title-sm title-sm_md">30-120 мин</h4>
-                <button class="btn btn--reset price__btn">Заказать</button>
-              </div>
-              <div class="title title-sm price__text">
-                Все цены указаны с учетом НДС. Стоимость ремонта указана на
-                единичную услугу. Для получения коммерческого предложения на
-                постоянное обслуживание, оставьте заявку.
-              </div>
+              <ul class="price__list swiper-wrapper">
+                <li class="price__list-wrapper swiper-slide">
+                  <div class="price__list-service">
+                    <h4 class="title title-sm title-sm_sm">Ремонтные услуги</h4>
+                    <h4 class="title title-sm title-sm_md">Диагностика</h4>
+                  </div>
+                  <div class="price__list-cost">
+                    <h4 class="title title-sm title-sm_sm">Цена</h4>
+                    <h4 class="title title-sm title-sm_md">Бесплатно</h4>
+                  </div>
+                  <div class="price__list-term">
+                    <h4 class="title title-sm title-sm_sm">Срок</h4>
+                    <div class="price__list-block">
+                      <h4 class="title title-sm title-sm_md">30 мин</h4>
+                      <button class="btn btn--reset price__list-btn">
+                        Заказать
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="price__list-wrapper swiper-slide">
+                  <div class="price__list-service">
+                    <h4 class="title title-sm title-sm_sm price__list-hide">
+                      Ремонтные услуги
+                    </h4>
+                    <h4 class="title title-sm title-sm_md">Замена дисплея</h4>
+                  </div>
+                  <div class="price__list-cost">
+                    <h4 class="title title-sm title-sm_sm price__list-hide">
+                      Цена
+                    </h4>
+                    <h4 class="title title-sm title-sm_md">1 000 ₽</h4>
+                  </div>
+                  <div class="price__list-term">
+                    <h4 class="title title-sm title-sm_sm price__list-hide">
+                      Срок
+                    </h4>
+                    <div class="price__list-block">
+                      <h4 class="title title-sm title-sm_md">30-120 мин</h4>
+                      <button class="btn btn--reset price__list-btn">
+                        Заказать
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="price__list-wrapper swiper-slide">
+                  <div class="price__list-service">
+                    <h4 class="title title-sm title-sm_sm price__list-hide">
+                      Ремонтные услуги
+                    </h4>
+                    <h4 class="title title-sm title-sm_md">
+                      Замена полифонического динамика
+                    </h4>
+                  </div>
+                  <div class="price__list-cost">
+                    <h4 class="title title-sm title-sm_sm price__list-hide">
+                      Цена
+                    </h4>
+                    <h4 class="title title-sm title-sm_md">1 000 ₽</h4>
+                  </div>
+                  <div class="price__list-term">
+                    <h4 class="title title-sm title-sm_sm price__list-hide">
+                      Срок
+                    </h4>
+                    <div class="price__list-block">
+                      <h4 class="title title-sm title-sm_md">30-120 мин</h4>
+                      <button class="btn btn--reset price__list-btn">
+                        Заказать
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="price__list-wrapper swiper-slide">
+                  <div class="price__list-service">
+                    <h4 class="title title-sm title-sm_sm price__list-hide">
+                      Ремонтные услуги
+                    </h4>
+                    <h4 class="title title-sm title-sm_md">
+                      Тестирование с выдачей технического заключения
+                    </h4>
+                  </div>
+                  <div class="price__list-cost">
+                    <h4 class="title title-sm title-sm_sm price__list-hide">
+                      Цена
+                    </h4>
+                    <h4 class="title title-sm title-sm_md">1 000 ₽</h4>
+                  </div>
+                  <div class="price__list-term">
+                    <h4 class="title title-sm title-sm_sm price__list-hide">
+                      Срок
+                    </h4>
+                    <div class="price__list-block">
+                      <h4 class="title title-sm title-sm_md">30-120 мин</h4>
+                      <button class="btn btn--reset price__list-btn">
+                        Заказать
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="price__list-wrapper swiper-slide">
+                  <div class="price__list-service">
+                    <h4 class="title title-sm title-sm_sm price__list-hide">
+                      Ремонтные услуги
+                    </h4>
+                    <h4 class="title title-sm title-sm_md">
+                      Замена программного обеспечения
+                    </h4>
+                  </div>
+                  <div class="price__list-cost">
+                    <h4 class="title title-sm title-sm_sm price__list-hide">
+                      Цена
+                    </h4>
+                    <h4 class="title title-sm title-sm_md">1 000 ₽</h4>
+                  </div>
+                  <div class="price__list-term">
+                    <h4 class="title title-sm title-sm_sm price__list-hide">
+                      Срок
+                    </h4>
+                    <div class="price__list-block">
+                      <h4 class="title title-sm title-sm_md">30-120 мин</h4>
+                      <button class="btn btn--reset price__list-btn">
+                        Заказать
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="swiper-pagination"></div>
               <a href="#" class="title price__offer">
                 Получить коммерческое предложение
               </a>

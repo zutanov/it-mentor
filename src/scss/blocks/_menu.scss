@@ -51,7 +51,6 @@
       }
     }
   }
-
   &__link {
     margin-bottom: 28px;
     @media (max-width: 1399px) {
@@ -71,7 +70,6 @@
       }
     }
   }
-
   &__contacts {
     display: flex;
     margin-bottom: 16px;
@@ -95,7 +93,7 @@
   }
   &-h {
     display: none;
-    padding: 18px 0;
+    padding: 16px 0;
     @media (max-width: 1399px) {
       display: block;
     }
@@ -110,6 +108,7 @@
     }
     &__icon {
       &_burger {
+        height: 40px;
         margin-right: 43px;
       }
     }
@@ -118,6 +117,7 @@
       align-items: center;
     }
     &__icons {
+      height: 40px;
       margin-left: 42px;
       display: flex;
       .menu-h__icon:first-child {
@@ -126,8 +126,14 @@
     }
     &__contacts {
       display: flex;
+      height: 40px;
       .menu-h__icon {
-        margin-right: 16px;
+        &:not(:last-child) {
+          margin-right: 16px;
+        }
+      }
+      @media (max-width: 360px) {
+        display: none;
       }
     }
   }

@@ -1,5 +1,11 @@
 .repair {
   padding-top: 15px;
+  @media (max-width: 768px) {
+    margin-top: 32px;
+  }
+  @media (max-width: 360px) {
+    margin-top: 24px;
+  }
   &__title {
     margin-bottom: 40px;
     text-transform: uppercase;
@@ -10,13 +16,22 @@
     display: grid;
     grid-template-columns: repeat(4, minmax(224px, 240px));
     grid-auto-rows: minmax(72px, auto);
-    column-gap: 32px;
+    justify-content: space-between;
+    column-gap: 5px;
     row-gap: 16px;
     height: 160px;
     overflow: hidden;
     // min-width: 0;
-    @media (max-width: 1399px) {
-      column-gap: 21px;
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(3, minmax(224px, 240px));
+      column-gap: 24px;
+      justify-content: center;
+    }
+    @media (max-width: 576px) {
+      display: flex;
+      height: 72px;
+      overflow: visible;
+      justify-content: flex-start;
     }
   }
   &__wrapper {
@@ -25,6 +40,9 @@
     border: 1px solid $border-color;
     border-radius: 6px;
     // min-width: 0;
+    @media (max-width: 576px) {
+      margin-bottom: 16px;
+    }
   }
   &__brand {
     height: 100%;
@@ -40,5 +58,8 @@
   }
   &__switch {
     display: flex;
+    @media (max-width: 576px) {
+      display: none;
+    }
   }
 }

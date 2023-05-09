@@ -1,57 +1,107 @@
 .price {
   margin-top: 50px;
   padding-top: 17px;
+  @media (max-width: 768px) {
+    margin-top: 32px;
+  }
+  @media (max-width: 360px) {
+    margin-top: 24px;
+  }
   &__title {
     text-transform: uppercase;
     color: $menu-text-color;
-    margin-bottom: 31px;
+    margin-bottom: 47px;
   }
-  &__wrapper {
+  &__list {
+    display: block;
     margin: 0 24px;
-    height: 62px;
-    display: grid;
-    grid-template-columns: 348px 74px 81px 119px;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid $border-color;
-    &:nth-child(2) {
-      height: 48px;
-      border: none;
+    @media (max-width: 768px) {
+      margin: 0 16px;
+      padding-right: 20px;
     }
-    &:nth-child(7) {
-      border: none;
+    &-hide {
+      display: none;
+      @media (max-width: 576px) {
+        display: block;
+      }
     }
-  }
-  &__btn {
-    width: 119px;
-    padding: 4px 12px;
-    text-align: left;
-    border-radius: 16px;
-    background-color: $malina;
-    font-weight: 700;
-    font-size: 12px;
-    letter-spacing: -0.15px;
-    text-transform: uppercase;
-    color: $white;
-    line-height: 24px;
-    position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      right: 13px;
-      top: 0;
-      bottom: 0;
-      margin: auto 0;
-      height: 7px;
-      width: 7px;
-      border-top: 2px solid $white;
-      border-right: 2px solid $white;
-      transform: rotate(45deg);
+    &-wrapper {
+      // height: 110px;
+      display: grid;
+      grid-template-columns: 348px 74px 220px;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid $border-color;
+      @media (max-width: 576px) {
+        padding: 16px 0;
+        grid-template-columns: minmax(260px, 381px);
+      }
+      .title-sm_sm {
+        padding: 16px 0;
+        @media (max-width: 576px) {
+          padding: 0;
+        }
+      }
+      .title-sm_md {
+        padding: 22px 0;
+        @media (max-width: 576px) {
+          padding: 0;
+        }
+      }
+    }
+    &-cost {
+      margin: 0 5px;
+      @media (max-width: 576px) {
+        margin-left: 0;
+        margin-top: 16px;
+      }
+    }
+    &-term {
+      @media (max-width: 576px) {
+        margin-top: 16px;
+      }
+    }
+    &-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-btn {
+      width: 119px;
+      height: 32px;
+      padding: 4px 12px;
+      margin-left: 5px;
+      text-align: left;
+      border-radius: 16px;
+      background-color: $malina;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: -0.15px;
+      text-transform: uppercase;
+      color: $white;
+      line-height: 24px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        right: 13px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        height: 7px;
+        width: 7px;
+        border-top: 2px solid $white;
+        border-right: 2px solid $white;
+        transform: rotate(45deg);
+      }
     }
   }
   &__text {
     margin-top: 32px;
     max-width: 421px;
+    @media (max-width: 768px) {
+      margin-top: 24px;
+    }
   }
   &__offer {
     margin-top: 16px;
@@ -70,6 +120,9 @@
       border-top: 2px solid $malina;
       border-right: 2px solid $malina;
       transform: rotate(45deg);
+    }
+    @media (max-width: 360px) {
+      display: none;
     }
   }
 }

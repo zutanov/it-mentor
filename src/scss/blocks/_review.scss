@@ -1,19 +1,45 @@
 .review {
   padding: 15px 0 51px;
-
+  @media (max-width: 768px) {
+    padding: 0;
+    margin-top: 32px;
+  }
   &__title {
     padding-left: 13px;
     color: $menu-text-color;
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
   &__wrapper {
     display: flex;
+    @media (max-width: 360px) {
+      display: block;
+    }
   }
   &__info {
     padding-right: 36px;
     width: 50%;
+    @media (max-width: 768px) {
+      padding-right: 48px;
+    }
+    @media (max-width: 360px) {
+      width: 100%;
+      padding: 0;
+    }
   }
   &__desc {
     margin: 19px 0 14px;
+    @media (max-width: 768px) {
+      margin: 0 0 10px;
+      height: 160px;
+      overflow: hidden;
+    }
+    @media (max-width: 360px) {
+      height: 90px;
+      line-height: 18px;
+      margin-bottom: 16px;
+    }
   }
   &__link {
     padding-left: 13px;
@@ -26,6 +52,14 @@
   }
   &__img {
     width: 50%;
+    @media (max-width: 768px) {
+      height: 208px;
+    }
+    @media (max-width: 360px) {
+      width: 100%;
+      margin-top: 16px;
+      height: 176px;
+    }
     img {
       width: 100%;
     }

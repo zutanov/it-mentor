@@ -2,6 +2,16 @@
   width: 440px;
   padding: 40px 32px 0;
   background: $white;
+  @media (max-width: 576px) {
+    width: 360px;
+    padding: 104px 16px 0;
+  }
+  @media (max-width: 320px) {
+    width: 100%;
+  }
+  #close {
+    transition: 0s;
+  }
   &__header {
     position: relative;
   }
@@ -12,6 +22,14 @@
     width: 40px;
     height: 40px;
     cursor: pointer;
+    transition: 0.8s;
+    &:hover {
+      transform: rotate(360deg);
+    }
+    @media (max-width: 576px) {
+      top: -80px;
+      left: 0;
+    }
   }
   &__title {
     margin-bottom: 24px;
@@ -25,6 +43,9 @@
       width: 3px;
       background: $highlight;
       border-radius: 2px;
+      @media (max-width: 576px) {
+        left: -16px;
+      }
     }
   }
   &__input {
@@ -42,6 +63,7 @@
     height: 118px;
   }
   &__policy {
+    opacity: 1;
     margin-bottom: 23px;
     span {
       color: $malina;

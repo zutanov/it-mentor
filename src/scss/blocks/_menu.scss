@@ -43,7 +43,12 @@
     margin-bottom: 37px;
   }
   &__icon {
+    height: 40px;
     cursor: pointer;
+    transition: 0.8s;
+    &:hover {
+      transform: rotate(360deg);
+    }
     &_close {
       display: none;
       @media (max-width: 1399px) {
@@ -53,6 +58,20 @@
   }
   &__link {
     margin-bottom: 28px;
+    transition: 0.4s;
+    &:hover {
+      color: $menu-text-color;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        left: -22px;
+        height: 100%;
+        width: 3px;
+        background: $highlight;
+        border-radius: 2px;
+      }
+    }
     @media (max-width: 1399px) {
       margin-bottom: 32px;
     }
@@ -87,6 +106,7 @@
   }
   &__language {
     margin-right: 7px;
+    cursor: pointer;
     &_checked {
       color: $menu-text-color;
     }
@@ -107,6 +127,11 @@
       align-items: center;
     }
     &__icon {
+      height: 40px;
+      transition: 0.8s;
+      &:hover {
+        transform: rotate(360deg);
+      }
       &_burger {
         height: 40px;
         margin-right: 43px;
@@ -132,7 +157,7 @@
           margin-right: 16px;
         }
       }
-      @media (max-width: 360px) {
+      @media (max-width: 576px) {
         display: none;
       }
     }

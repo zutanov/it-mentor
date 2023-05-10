@@ -27,9 +27,13 @@
       column-gap: 24px;
       justify-content: center;
     }
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(2, minmax(224px, 240px));
+    }
     @media (max-width: 576px) {
-      display: unset;
-      height: auto;
+      display: flex;
+      justify-content: flex-start;
+      overflow: visible;
     }
   }
   &__card {
@@ -37,6 +41,10 @@
     padding: 16px;
     border: 1px solid $border-color;
     border-radius: 6px;
+    &:hover {
+      transition: 0.8s;
+      border: 2px solid $malina;
+    }
     &-img {
       align-self: end;
       justify-self: end;

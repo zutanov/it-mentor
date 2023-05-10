@@ -46,6 +46,11 @@
     }
     img {
       margin-left: 8px;
+      cursor: pointer;
+      transition: 0.8s;
+      &:hover {
+        transform: rotate(360deg);
+      }
     }
   }
   &__bottom {
@@ -63,21 +68,16 @@
     border-radius: 6px;
     color: $menu-text-color;
     white-space: nowrap;
+    border: 2px solid $white;
+    &:hover {
+      transition: 0.3s;
+      border: 2px solid $btn-border-color;
+    }
     @media (max-width: 768px) {
       padding: 8px 10px;
     }
     &_checked {
       border: 2px solid $btn-border-color;
     }
-    // &_adress {
-    //   @media (max-width: 992px) {
-    //     display: none;
-    //   }
-    // }
-    // &_special {
-    //   @media (max-width: 576px) {
-    //     display: none;
-    //   }
-    // }
   }
 }

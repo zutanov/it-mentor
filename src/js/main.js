@@ -8,15 +8,39 @@ const btnRepair = document.querySelector(".repair__btn");
 const btnTechnic = document.querySelector(".technic__btn");
 const btnRepairArrow = document.querySelector(".repair__arrows");
 const btnTechnicArrow = document.querySelector(".technic__arrows");
+const slider = document.querySelectorAll(".swiper-container");
+const sliderPagin = document.querySelectorAll(".swiper-pagination");
 
-const swiper = new Swiper(".swiper", {
-  centeredSlides: true,
-  slidesPerGroup: 1,
-  slidesPerView: 1,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+let mySwiper;
+
+function mobileSlider() {
+  slider.forEach((el) => {
+    if (window.innerWidth <= 576 && el.dataset.mobile == "false") {
+      mySwiper = new Swiper(".swiper", {
+        slidesPerGroup: 1,
+        slidesPerView: 1,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+      el.dataset.mobile = "true";
+      sliderPagin.forEach((el) => (el.style.display = "block"));
+    }
+    if (window.innerWidth > 576) {
+      el.dataset.mobile = "false";
+      if (el.classList.contains("swiper-initialized")) {
+        el.classList.remove("swiper-initialized");
+        sliderPagin.forEach((el) => (el.style.display = "none"));
+      }
+    }
+  });
+}
+
+mobileSlider();
+
+window.addEventListener("resize", () => {
+  mobileSlider();
 });
 
 function contentTrigger(parentNode, btn, btnArrow) {
